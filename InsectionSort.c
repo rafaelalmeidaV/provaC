@@ -8,7 +8,7 @@ void func(int A[], int tamanho){
         i = j - 1;
 
         k=j;
-        while ((i >= 0) && (A[i] < elemento))
+        while ((i >= 0) && (A[i] > elemento))
         {
             A[k] = A[i];
             i--;
