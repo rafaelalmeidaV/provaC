@@ -1,0 +1,22 @@
+Algoritmos de Ordenação
+Método Ineficiente:
+◦ Bogosort: O (∞)
+Métodos elementares:
+◦ Inserção: O(n2) - estavel
+◦ Bubblesort: O(n2) - estáveis
+◦ Seleção: O(n2) - instavel
+	Possui melhor desempenho quando o vetor é menor;
+	O desempenho não melhora se o vetor já estiver ordenado;
+	Não é um algoritmo estável.
+Métodos Eficientes:
+◦ Quicksort: O(n log n) (no pior caso é O(n2) - instavel
+◦ Heapsort: O(n log n) - instavel
+◦ Mergesort: O(n log n) - estavel
+
+
+
+item B)
+Um algoritmo de ordenação é considerado estável 
+se preserva a ordem relativa dos elementos 
+com chaves iguais durante o processo de ordenação.
+

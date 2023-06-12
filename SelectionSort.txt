@@ -1,0 +1,41 @@
+Nesse código, há uma modificação na função funcSelectionSort para contar o número de trocas realizadas durante a execução do algoritmo. Vou explicar o código passo a passo:
+
+A função funcSelectionSort recebe um array v e seu tamanho tamanho como parâmetros.
+
+A variável trocou é introduzida e inicializada como 0. 
+Essa variável será usada para contar o número de trocas realizadas durante o algoritmo.
+
+O primeiro loop for com a variável i percorre o array de 0 até tamanho-1, 
+como no Selection Sort convencional.
+
+Dentro desse loop, a variável min é definida como i, 
+que representa o índice do elemento mínimo atual.
+
+O segundo loop for com a variável j percorre o array a partir de i+1 até o final. 
+Ele compara cada elemento com o elemento mínimo atual (v[min]). 
+Se um elemento menor for encontrado, 
+a variável min é atualizada para armazenar o índice desse novo elemento mínimo, 
+e a variável trocou é incrementada em 1 para contar a troca realizada.
+
+Após o segundo loop, o elemento mínimo é trocado com o elemento na posição i,
+ como no Selection Sort convencional.
+
+O algoritmo continua iterando até que todos os elementos
+ sejam considerados e colocados em suas posições corretas.
+
+Após a conclusão do algoritmo, o valor de trocou é impresso 
+na tela para mostrar o número total de trocas 
+realizadas durante a execução do Selection Sort.
+
+No main, é criado um array de exemplo A com alguns valores desordenados. 
+O tamanho do array é definido como 8.
+
+A função funcSelectionSort é chamada, passando o array A e
+ o tamanho tamanho como argumentos para ordenar o 
+array usando o algoritmo Selection Sort modificado.
+
+Em seguida, o array ordenado é impresso na tela usando um loop for.
+
+O código implementa o algoritmo Selection Sort modificado, 
+que conta o número de trocas realizadas durante a execução. 
+O número de trocas é impresso no final da execução para mostrar a quantidade de trocas realizadas.

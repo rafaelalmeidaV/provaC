@@ -1,0 +1,52 @@
+void func(int A[], int tamanho){
+    int i, j, k, elemento;
+
+    for( j = 1; j < tamanho; j++){
+        elemento = A[j];
+        i = j - 1;
+
+        k = j;
+        while ((i >= 0) and (A[i] > elemento))
+        {
+            A[k] = A[i];
+            i--;
+            k--;
+        }
+        A[k] = elemento;
+    }
+}
+A função func recebe um array A e seu tamanho tamanho como parâmetros. Essa função implementa o algoritmo Insertion Sort para ordenar o array. O Insertion Sort funciona percorrendo o array e, para cada elemento, inserindo-o na posição correta dentro da parte já ordenada do array.
+
+O laço externo for começa em j = 1 (o segundo elemento do array) e percorre até o último elemento (j < tamanho). Isso é feito porque a primeira posição do array é considerada como a parte já ordenada.
+
+Dentro do laço, o elemento atual A[j] é armazenado na variável elemento, 
+e i é definido como o índice anterior a j.
+
+Em seguida, um laço while é usado para percorrer a parte ordenada do array 
+(da posição i até o início do array) enquanto o elemento atual A[i] é maior que o elemento.
+ Durante esse laço, os elementos maiores são deslocados uma posição para a direita (A[k] = A[i]),
+ e tanto i quanto k são decrementados.
+
+Após o laço while, o elemento elemento é inserido na posição correta no array, 
+definida por k. Dessa forma, o elemento é colocado no lugar certo na parte já ordenada do array.
+
+int main(){
+    int A[5] = {5,4,3,2,1};
+    int tamanho = 5;
+    func(A, tamanho);
+    for (int i = 0; i < tamanho; i++)
+    {
+        printf("%d ", A[i]);
+    }
+    
+    return 0;
+}
+No main(), é criado um array A com alguns valores desordenados. 
+O tamanho do array é definido como 5. Em seguida, a função func é chamada, 
+passando o array e o tamanho como argumentos para ordenar o array.
+
+Finalmente, o array é impresso para verificar a ordenação.
+
+O algoritmo Insertion Sort funciona corretamente para ordenar o array fornecido. 
+No entanto, é importante notar que o Insertion Sort é um algoritmo de ordenação simples,
+ mas não é eficiente para grandes quantidades de dados.

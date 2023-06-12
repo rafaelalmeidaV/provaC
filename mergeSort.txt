@@ -1,0 +1,31 @@
+O código fornecido implementa o algoritmo Merge Sort, 
+que é um algoritmo de ordenação eficiente e 
+utiliza a estratégia de dividir para conquistar.
+
+O Merge Sort divide a lista em sublistas menores, 
+recursivamente ordena cada sublista e, em seguida, 
+mescla as sublistas ordenadas para obter a lista final ordenada. 
+O processo de mesclagem é realizado pela função merge, 
+que combina duas sublistas ordenadas em uma única lista ordenada.
+
+A função merge recebe como parâmetros a lista v, 
+os índices inicio, meio e fim. Ela cria duas sublistas temporárias,
+L e R, e copia os elementos correspondentes da lista original para essas sublistas.
+Em seguida, ela compara os elementos em L e R e
+os mescla de forma ordenada na lista original v.
+
+A função mergeSort é a função principal do algoritmo Merge Sort. 
+Ela recebe como parâmetros a lista v, os índices inicio e fim. 
+Ela divide a lista em duas partes recursivamente, 
+chamando-se a si mesma para cada metade. Em seguida, 
+chama a função merge para mesclar as duas sublistas ordenadas.
+
+No main, é criado um array A com 8 elementos desordenados. 
+Em seguida, a função mergeSort é chamada para ordenar o array. 
+Por fim, o array ordenado é impresso na tela.
+
+Executando o código fornecido, obtemos a saída:
+
+1 1 1 2 3 3 4 5
+
+Isso indica que o Merge Sort ordenou corretamente o array A. Todos os elementos estão em ordem crescente.

@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Definição da estrutura do nó da lista
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
+
+// Função para criar um novo nó com um determinado valor
+Node* createNode(int value) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (newNode == NULL) {
+        printf("Erro: falha na alocação de memória.\n");
+        exit(1);
+    }
+    newNode->data = value;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Função para converter um vetor em uma lista encadeada
+Node* arrayToList(int arr[], int size) {
+    if (size == 0)
+        return NULL;
+
+    Node* head = createNode(arr[0]);
+    Node* current = head;
+
+    for (int i = 1; i < size; i++) {
+        Node* newNode = createNode(arr[i]);
+        current->next = newNode;
+        current = newNode;
+    }
+
+    return head;
+}
+
+// Função para imprimir os elementos da lista encadeada
+void printList(Node* head) {
+    Node* current = head;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
+
+// Função principal
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    Node* head = arrayToList(arr, size);
+
+    printf("Lista encadeada resultante: ");
+    printList(head);
+
+    return 0;
+}
+
+transformando um vetor em uma lista encadeada

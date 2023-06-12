@@ -1,0 +1,81 @@
+O código fornecido implementa o algoritmo QuickSort 
+em C para ordenar um array de inteiros. 
+Vou comentar o código linha por linha para ajudar na compreensão:
+
+
+void funcQuickSort(int v[], int inicio, int fim){
+    int i, j, pivo, aux;
+    i = inicio;
+    j = fim - 1;
+    pivo = v[(inicio + fim) / 2];
+Nessa função, v é o array a ser ordenado, 
+inicio é o índice inicial do subarray 
+a ser considerado e fim é o índice final (exclusivo) do subarray.
+ i e j são variáveis auxiliares para percorrer o array, 
+pivo armazena o valor do pivô e aux é uma variável temporária para auxiliar nas trocas.
+
+c
+Copy code
+    while(i<=j){
+        while(v[i] < pivo and i < fim){
+            i++;
+        }
+        while (v[j] > pivo and j > inicio){
+            j--;
+        }
+        if( i <= j){
+            aux = v[i];
+            v[i] = v[j];
+            v[j] = aux;
+            i++;
+            j--;
+        }
+Essa parte do código é responsável por realizar a partição do array, 
+movendo elementos menores que o pivô para a esquerda e elementos maiores para a direita.
+Os laços while são usados para encontrar posições no array onde os 
+elementos estão fora de ordem em relação ao pivô. Em seguida, 
+é feita a troca dos elementos v[i] e v[j] para corrigir a ordem.
+
+
+        if(j > inicio){
+            funcQuickSort(v, inicio, j+1);
+        }
+        if(i < fim){
+            funcQuickSort(v, i, fim);
+        }
+    }
+Essa parte do código faz as chamadas recursivas
+para ordenar os subarrays menores que o pivô (v[inicio...j]) 
+e maiores que o pivô (v[i...fim]), até que todos os subarrays tenham tamanho 1 ou zero.
+
+int main(){
+    int A[8] = {5,4,1,1,3,3,2,1};
+    int inicio = 0;
+    int fim = 8;
+    funcQuickSort(A, inicio, fim);
+    for (int i = 0; i < 8; i++)
+    {
+        printf("%d ", A[i]);
+    }
+}
+No main(), é criado um array A com alguns valores desordenados. 
+Em seguida, a função funcQuickSort é chamada para ordenar o array. 
+Por fim, o array é impresso para verificar a ordenação.
+
+O algoritmo funciona corretamente e é uma implementação válida do QuickSort.
+ No entanto, é importante notar que essa implementação não trata 
+o caso de elementos iguais, o que pode resultar em uma ordenação não estável.
+
+
+A ideia do QuickSort
+Dividir para conquistar
+
+ Passo 1- Divida o conjunto original a ser ordenado em dois conjuntos menores;
+ Eleja um pivô
+ Mantenha a esquerda do pivô todos os elementos menores e à direita todos os elementos
+maiores que o pivô.
+
+ Passo2 - Ordene cada um dos conjuntos menores individualmente ( pode
+envolver a execução do algoritmo novamente para esse passo)
+
+ Passo 3 – Combine os resultados do passo 2 para produzir a solução final.

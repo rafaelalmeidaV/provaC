@@ -1,0 +1,30 @@
+
+Claro! Vou explicar o código passo a passo:
+
+A função bubbleSort recebe um array arr e seu tamanho n como parâmetros.
+
+O primeiro loop for com a variável i 
+controla o número de iterações necessárias para ordenar o array. 
+Ele percorre até n-1, pois após cada iteração, 
+o maior elemento é colocado na posição correta no final do array.
+
+O segundo loop for com a variável j percorre o array de 0 até n-i-1.
+ A cada iteração, ele compara o elemento atual arr[j] com o próximo elemento arr[j+1]. 
+Se arr[j] for maior que arr[j+1], 
+ocorre uma troca de posição entre eles para colocar o elemento maior na posição correta.
+
+A função bubbleSort continua realizando as comparações e trocas necessárias 
+até que o array esteja completamente ordenado.
+
+No main, é criado um array de exemplo arr com alguns valores desordenados.
+ O tamanho do array é calculado usando sizeof(arr) / sizeof(arr[0]) 
+para garantir que seja preciso, mesmo se o tamanho do array for alterado.
+
+A função bubbleSort é chamada passando o array arr 
+e o tamanho n como argumentos para ordenar o array.
+
+Em seguida, o array ordenado é impresso na tela usando um loop for.
+
+O código em questão implementa corretamente o algoritmo Bubble Sort em C. 
+Ele percorre o array várias vezes, 
+comparando elementos adjacentes e realizando trocas até que o array esteja completamente ordenado.

@@ -1,0 +1,44 @@
+O Bubble Sort é um algoritmo de ordenação estável. 
+Ele compara elementos adjacentes e os troca se estiverem fora de ordem. 
+A repetição desse processo faz com que os elementos maiores "flutuem" para o final da lista,
+ enquanto os menores permanecem mais próximos do início.
+ Durante a troca, se dois elementos tiverem chaves iguais, 
+eles não serão trocados, preservando assim a ordem relativa entre eles.
+
+Aqui está um exemplo de execução do Bubble Sort para mostrar sua estabilidade:
+
+Considere a seguinte lista de elementos com chaves iguais:
+
+[5a, 3, 4, 5b, 1]
+
+No Bubble Sort, o algoritmo percorre a lista repetidamente, 
+comparando elementos adjacentes e realizando trocas se necessário.
+
+1ª iteração:
+[5a, 3, 4, 5b, 1] -> 5a e 3 são trocados -> [3, 5a, 4, 5b, 1]
+[3, 5a, 4, 5b, 1] -> 5a e 4 são trocados -> [3, 4, 5a, 5b, 1]
+[3, 4, 5a, 5b, 1] -> 5a e 5b não são trocados (mesma chave) -> [3, 4, 5a, 5b, 1]
+[3, 4, 5a, 5b, 1] -> 5b e 1 são trocados -> [3, 4, 5a, 1, 5b]
+
+Após a primeira iteração, a ordem relativa dos elementos com 
+chaves iguais (5a e 5b) é preservada. 
+O mesmo acontece nas iterações subsequentes.
+
+2ª iteração:
+[3, 4, 5a, 1, 5b] -> 3 e 4 não são trocados (mesma chave) -> [3, 4, 5a, 1, 5b]
+[3, 4, 5a, 1, 5b] -> 4 e 5a não são trocados (mesma chave) -> [3, 4, 5a, 1, 5b]
+[3, 4, 5a, 1, 5b] -> 5a e 1 são trocados -> [3, 4, 1, 5a, 5b]
+
+3ª iteração:
+[3, 4, 1, 5a, 5b] -> 3 e 4 não são trocados (mesma chave) -> [3, 4, 1, 5a, 5b]
+[3, 4, 1, 5a, 5b] -> 4 e 1 são trocados -> [3, 1, 4, 5a, 5b]
+
+4ª iteração:
+[3, 1, 4, 5a, 5b] -> 3 e 1 são trocados -> [1, 3, 4, 5a, 5b]
+
+Após a quarta iteração, a lista está ordenada e a ordem relativa 
+entre os elementos com chaves iguais (5a e 5b) é preservada.
+
+Portanto, podemos concluir que o Bubble Sort é um algoritmo 
+de ordenação estável, pois mantém a ordem relativa dos elementos 
+com chaves iguais durante o processo de ordenação.
